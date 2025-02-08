@@ -15,9 +15,9 @@ go get github.com/xncs120/go-gradio@latest
 2. Replace the correct url link to your HuggingFace Spaces and token of HuggingFace.
 ```sh
 import (
-	"fmt"
+    "fmt"
 
-	"github.com/xncs120/go-gradio"
+    "github.com/xncs120/go-gradio"
 )
 
 gr := gradio.NewClient(
