@@ -1,6 +1,6 @@
 # GoGradio
 This package is a simple sdk to connect your Gradio api hosted on HuggingFace Spaces in go.
-Only support simple chat completion without no session.
+Only support simple chat completion without session (history memory).
 
 ## Getting started
 ### Installation
@@ -14,6 +14,12 @@ go get github.com/xncs120/go-gradio@latest
 1. Use code below to initiate gradio client and call to your Gradio api hosted on HuggingFace Spaces.
 2. Replace the correct url link to your HuggingFace Spaces and token of HuggingFace.
 ```sh
+import (
+	"fmt"
+
+	"github.com/xncs120/go-gradio"
+)
+
 gr := gradio.NewClient(
     "https://username-space.hf.space/gradio_api/call/chat",
     gradio.WithHfToken("HF_TOKEN"),
