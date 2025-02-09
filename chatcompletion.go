@@ -12,6 +12,9 @@ import (
 )
 
 func (gr *Gradio) getEventId(userInput string, args ...interface{}) string {
+	if gr.systemPrompt != "" {
+		userInput = gr.systemPrompt + "\n\n" + userInput
+	}
 	jsonData := map[string]interface{}{
 		"data": append([]interface{}{userInput}, args...),
 	}
